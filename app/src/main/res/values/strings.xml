@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">PlanetaryExplorer</string>
-    <string name="app_title">Planetary Explorer</string>
+    <string name="app_name">Planetary Explorer</string>
     <string name="about_button_text">About</string>
     <string name="about_text">Write some text here...</string>
     <string name="back_button_text">Back</string>
