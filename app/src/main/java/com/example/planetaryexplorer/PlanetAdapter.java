@@ -1,5 +1,6 @@
 package com.example.planetaryexplorer;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,12 +30,13 @@ public class PlanetAdapter extends RecyclerView.Adapter<PlanetAdapter.PlanetView
         return new PlanetViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.planet_list_item, parent, false));
     }
 
+    @SuppressLint("DefaultLocale")
     @Override
     public void onBindViewHolder(@NonNull PlanetAdapter.PlanetViewHolder holder, int position) {
         Glide.with(context).load(planets.get(position).imageUrl).into(holder.planetImage);
         holder.planetName.setText(planets.get(position).name);
-        holder.planetAge.setText("Age: " + planets.get(position).age + " billion years");
-        holder.planetRadius.setText("Radius: " + planets.get(position).radius + " kilometers");
+        holder.planetAge.setText(String.format("Age: %d billion years", planets.get(position).age));
+        holder.planetRadius.setText(String.format("Radius: %d kilometers", planets.get(position).radius));
     }
 
     @Override
