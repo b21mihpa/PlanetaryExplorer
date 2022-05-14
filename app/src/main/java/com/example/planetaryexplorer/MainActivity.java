@@ -1,6 +1,8 @@
 package com.example.planetaryexplorer;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,8 +14,11 @@ import com.google.gson.reflect.TypeToken;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements JsonTask.JsonTaskListener {
-    private List<Planet> planets;
     private final String API_ENDPOINT = "https://mobprog.webug.se/json-api?login=b21mihpa";
+
+    private List<Planet> planets;
+    private RecyclerView recyclerView;
+    private PlanetAdapter planetAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,5 +35,10 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
     public void onPostExecute(String json) {
         Gson gson = new Gson();
         planets = gson.fromJson(json, new TypeToken<List<Planet>>(){}.getType());
+
+        recyclerView = findViewById(R.id.planets_list);
+        planetAdapter = new PlanetAdapter(planets);
+        recyclerView.setAdapter(planetAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 }

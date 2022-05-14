@@ -6,7 +6,8 @@ public class Planet {
     @SerializedName("ID")
     public String id;
     public String name;
-    public int size;
+    @SerializedName("size")
+    public int radius;
     @SerializedName("cost")
     public int age;
     @SerializedName("auxdata")
