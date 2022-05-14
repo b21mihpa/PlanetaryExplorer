@@ -29,6 +29,9 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
 
         final Button aboutButton = findViewById(R.id.about_button);
         aboutButton.setOnClickListener(view -> startActivity(new Intent(this, AboutActivity.class)));
+
+        final Button filterButton = findViewById(R.id.filter_button);
+        filterButton.setOnClickListener(view -> startActivity(new Intent(this, FilterActivity.class)));
     }
 
     @Override
