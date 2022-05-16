@@ -42,7 +42,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:text="@string/about_text"
+        android:text="@string/general_text_placeholder"
         android:textSize="18sp"
         app:layout_constraintTop_toBottomOf="@+id/planet_name" />
 </androidx.constraintlayout.widget.ConstraintLayout>
