@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PlanetaryExplorer">
         <activity
+            android:name=".PlanetActivity"
+            android:exported="false" />
+        <activity
             android:name=".AboutActivity"
             android:exported="false" />
         <activity

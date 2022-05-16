@@ -6,7 +6,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Button;
 
 import com.google.gson.Gson;
@@ -48,6 +47,8 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
 
     @Override
     public void onPlanetClick(int position) {
-        Log.d("planet_index", String.valueOf(position));
+        final Intent intent = new Intent(this, PlanetActivity.class);
+        intent.putExtra("imageUrl", planets.get(position).imageUrl);
+        startActivity(intent);
     }
 }
