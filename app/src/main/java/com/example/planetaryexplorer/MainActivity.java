@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
     public void onPlanetClick(int position) {
         final Intent intent = new Intent(this, PlanetActivity.class);
         intent.putExtra("imageUrl", planets.get(position).imageUrl);
+        intent.putExtra("name", planets.get(position).name);
         startActivity(intent);
     }
 }
