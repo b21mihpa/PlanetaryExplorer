@@ -20,14 +20,18 @@ public class PlanetAdapter extends RecyclerView.Adapter<PlanetAdapter.PlanetView
 
     private Context context;
 
-    public PlanetAdapter(List<Planet> planets) {
+    private OnPlanetClickListener onPlanetClickListener;
+
+    public PlanetAdapter(List<Planet> planets, OnPlanetClickListener onPlanetClickListener) {
         this.planets = planets;
+        this.onPlanetClickListener = onPlanetClickListener;
     }
 
     @NonNull
     @Override
     public PlanetAdapter.PlanetViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new PlanetViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.planet_list_item, parent, false));
+
+        return new PlanetViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.planet_list_item, parent, false), onPlanetClickListener);
     }
 
     @SuppressLint("DefaultLocale")
@@ -44,13 +48,15 @@ public class PlanetAdapter extends RecyclerView.Adapter<PlanetAdapter.PlanetView
         return planets.size();
     }
 
-    public class PlanetViewHolder extends RecyclerView.ViewHolder {
+    public class PlanetViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private final ImageView planetImage;
         private final TextView planetName;
         private final TextView planetAge;
         private final TextView planetRadius;
 
-        public PlanetViewHolder(@NonNull View itemView) {
+        private OnPlanetClickListener onPlanetClickListener;
+
+        public PlanetViewHolder(@NonNull View itemView, OnPlanetClickListener onPlanetClickListener) {
             super(itemView);
 
             context = itemView.getContext();
@@ -59,6 +65,18 @@ public class PlanetAdapter extends RecyclerView.Adapter<PlanetAdapter.PlanetView
             planetName = itemView.findViewById(R.id.planet_name);
             planetAge = itemView.findViewById(R.id.planet_age);
             planetRadius = itemView.findViewById(R.id.planet_radius);
+
+            this.onPlanetClickListener = onPlanetClickListener;
+            itemView.setOnClickListener(this);
         }
+
+        @Override
+        public void onClick(View view) {
+            onPlanetClickListener.onPlanetClick(getAdapterPosition());
+        }
+    }
+
+    public interface OnPlanetClickListener {
+        void onPlanetClick(int position);
     }
 }

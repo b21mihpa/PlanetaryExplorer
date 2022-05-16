@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 
 import com.google.gson.Gson;
@@ -13,7 +14,7 @@ import com.google.gson.reflect.TypeToken;
 
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements JsonTask.JsonTaskListener {
+public class MainActivity extends AppCompatActivity implements JsonTask.JsonTaskListener, PlanetAdapter.OnPlanetClickListener {
     private final String API_ENDPOINT = "https://mobprog.webug.se/json-api?login=b21mihpa";
 
     private List<Planet> planets;
@@ -40,8 +41,13 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         planets = gson.fromJson(json, new TypeToken<List<Planet>>(){}.getType());
 
         recyclerView = findViewById(R.id.planets_list);
-        planetAdapter = new PlanetAdapter(planets);
+        planetAdapter = new PlanetAdapter(planets, this);
         recyclerView.setAdapter(planetAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+    }
+
+    @Override
+    public void onPlanetClick(int position) {
+        Log.d("planet_index", String.valueOf(position));
     }
 }
