@@ -9,6 +9,78 @@
     android:paddingEnd="16dp"
     android:paddingBottom="8dp">
 
+    <TextView
+        android:id="@+id/filter_planets_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/filter_planets_text"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkbox_all_planets"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:buttonTint="@color/purple_700"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filter_planets_title" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-3dp"
+        android:text="@string/show_all_planets"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/checkbox_all_planets"
+        app:layout_constraintStart_toEndOf="@+id/checkbox_all_planets"
+        app:layout_constraintTop_toTopOf="@+id/checkbox_all_planets" />
+
+    <CheckBox
+        android:id="@+id/checkbox_terrestrial_planets"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:buttonTint="@color/purple_700"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkbox_all_planets" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-3dp"
+        android:text="@string/show_terrestrial_planets"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/checkbox_terrestrial_planets"
+        app:layout_constraintStart_toEndOf="@+id/checkbox_terrestrial_planets"
+        app:layout_constraintTop_toTopOf="@+id/checkbox_terrestrial_planets" />
+
+    <CheckBox
+        android:id="@+id/checkbox_jovian_planets"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:buttonTint="@color/purple_700"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkbox_terrestrial_planets" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-3dp"
+        android:text="@string/show_jovian_planets"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/checkbox_jovian_planets"
+        app:layout_constraintStart_toEndOf="@+id/checkbox_jovian_planets"
+        app:layout_constraintTop_toTopOf="@+id/checkbox_jovian_planets" />
+
     <Button
         android:id="@+id/back_button"
         android:layout_width="match_parent"
