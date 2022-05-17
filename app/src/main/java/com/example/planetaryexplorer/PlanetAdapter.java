@@ -16,11 +16,11 @@ import com.bumptech.glide.Glide;
 import java.util.List;
 
 public class PlanetAdapter extends RecyclerView.Adapter<PlanetAdapter.PlanetViewHolder> {
-    private List<Planet> planets;
+    private final List<Planet> planets;
 
     private Context context;
 
-    private OnPlanetClickListener onPlanetClickListener;
+    private final OnPlanetClickListener onPlanetClickListener;
 
     public PlanetAdapter(List<Planet> planets, OnPlanetClickListener onPlanetClickListener) {
         this.planets = planets;
@@ -54,7 +54,7 @@ public class PlanetAdapter extends RecyclerView.Adapter<PlanetAdapter.PlanetView
         private final TextView planetAge;
         private final TextView planetRadius;
 
-        private OnPlanetClickListener onPlanetClickListener;
+        private final OnPlanetClickListener onPlanetClickListener;
 
         public PlanetViewHolder(@NonNull View itemView, OnPlanetClickListener onPlanetClickListener) {
             super(itemView);

@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
 
+import java.util.Locale;
+
 public class PlanetActivity extends AppCompatActivity {
 
     @Override
@@ -28,8 +30,8 @@ public class PlanetActivity extends AppCompatActivity {
         planetName.setText(getIntent().getStringExtra("name"));
         planetLocation.setText(String.format("%s is the %s.", getIntent().getStringExtra("name"), getIntent().getStringExtra("location")));
         planetCategory.setText(String.format("Category: %s Planet", capitalize(getIntent().getStringExtra("category"))));
-        planetRadius.setText(String.format("Radius: %d kilometers", getIntent().getIntExtra("radius", 0)));
-        planetAge.setText(String.format("Age: %d billion years", getIntent().getIntExtra("age", 0)));
+        planetRadius.setText(String.format(Locale.ENGLISH, "Radius: %d kilometers", getIntent().getIntExtra("radius", 0)));
+        planetAge.setText(String.format(Locale.ENGLISH, "Age: %d billion years", getIntent().getIntExtra("age", 0)));
 
         final Button backButton = findViewById(R.id.back_button);
         backButton.setOnClickListener(view -> startActivity(new Intent(this, MainActivity.class)));
