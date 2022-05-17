@@ -26,8 +26,8 @@ public class FilterActivity extends AppCompatActivity {
         checkBoxJovianPlanets.setChecked((sharedPreferences.getBoolean("show_jovian_planets", true)));
         checkBoxJovianPlanets.setOnClickListener(view -> editor.putBoolean("show_jovian_planets", checkBoxJovianPlanets.isChecked()));
 
-        final Button backButton = findViewById(R.id.back_button);
-        backButton.setOnClickListener(view -> {
+        final Button applyButton = findViewById(R.id.apply_button);
+        applyButton.setOnClickListener(view -> {
             startActivity(new Intent(this, MainActivity.class));
             editor.apply();
         });
