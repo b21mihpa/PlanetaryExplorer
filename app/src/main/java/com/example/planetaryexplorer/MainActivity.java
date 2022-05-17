@@ -67,6 +67,10 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         final Intent intent = new Intent(this, PlanetActivity.class);
         intent.putExtra("imageUrl", planets.get(position).imageUrl);
         intent.putExtra("name", planets.get(position).name);
+        intent.putExtra("location", planets.get(position).location);
+        intent.putExtra("category", planets.get(position).category);
+        intent.putExtra("radius", planets.get(position).radius);
+        intent.putExtra("age", planets.get(position).age);
         startActivity(intent);
     }
 }

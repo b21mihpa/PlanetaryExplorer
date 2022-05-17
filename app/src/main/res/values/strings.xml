@@ -5,8 +5,8 @@
     <string name="about_second_paragraph">Revolving around the sun are eight planets. These planets are divided into two categories, based on their composition:</string>
     <string name="about_third_paragraph">Terrestrial planets including <b>Mercury</b>, <b>Venus</b>, <b>Earth</b>, and <b>Mars</b>, are primarily made of rocky material. Their surfaces are solid, they are devoid of any ring systems, they have very few or no moons, and they are relatively small.\n\nThe smallest and closest to the sun is Mercury, which has the shortest orbit in the solar system at about three Earth months.\n\nVenus is the hottest planet, with temperatures of up to 867 degrees Fahrenheit, due to an atmosphere of carbon dioxide and extensive lava flows.\n\nNext to this world of fire is a world of water, Earth. The water systems on this planet help create the only known environment in the universe capable of sustaining life.\n\nThe last of the terrestrial planets, Mars, might have also supported life about 3.7 billion years ago, when the planet had a watery surface, and moist atmosphere.</string>
     <string name="about_fourth_paragraph">Beyond the four Terrestrial planets of the inner solar system lie the Jovian planets of the outer solar system. The Jovian planets include gas giants <b>Jupiter</b> and <b>Saturn</b>, and ice giants <b>Uranus</b> and <b>Neptune</b>. The gas giants are predominantly made of helium and hydrogen, and the ice giants also contain rock, ice, and a liquid mixture of water, methane, and ammonia. All four Jovian planets have multiple moons, sport ring systems, have no solid surface, and are immense.\n\nThe largest Jovian is also the largest planet in the solar system, Jupiter.\n\nNearby is Saturn, the solar system\'s second largest planet. Its signature rings are wide enough to fit between Earth and the moon, but are barely a kilometer thick.\n\nPast Saturn are the ice giants, Uranus and Neptune. The slightly bigger of these ice giants, Uranus, is famous for rotating on its side.\n\nNext to Uranus is Neptune, the outermost planet in the solar system, and also one of the coldest.</string>
-    <string name="about_terrestrial_title">Terrestrial</string>
-    <string name="about_jovian_title">Jovian</string>
+    <string name="about_terrestrial_title">Terrestrial Planets</string>
+    <string name="about_jovian_title">Jovian Planets</string>
     <string name="general_text_placeholder">Write some text here...</string>
     <string name="back_button_text">Back</string>
     <string name="planet_image_description">Satellite image of a planet in our solar system</string>
@@ -16,7 +16,7 @@
     <string name="filter_button_text">Filters</string>
     <string name="filter_planets_text">Filter planets</string>
     <string name="show_all_planets">Show all planets</string>
-    <string name="show_terrestrial_planets">Show terrestrial planets</string>
-    <string name="show_jovian_planets">Show jovian planets</string>
+    <string name="show_terrestrial_planets">Show Terrestrial Planets</string>
+    <string name="show_jovian_planets">Show Jovian Planets</string>
     <string name="apply_button_text">Apply</string>
 </resources>

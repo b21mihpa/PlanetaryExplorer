@@ -39,10 +39,38 @@
         app:layout_constraintTop_toBottomOf="@+id/planet_image" />
 
     <TextView
+        android:id="@+id/planet_location"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="@string/general_text_placeholder"
         android:textSize="18sp"
         app:layout_constraintTop_toBottomOf="@+id/planet_name" />
+
+    <TextView
+        android:id="@+id/planet_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/general_text_placeholder"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/planet_location" />
+
+    <TextView
+        android:id="@+id/planet_radius"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/general_text_placeholder"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/planet_category" />
+
+    <TextView
+        android:id="@+id/planet_age"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/general_text_placeholder"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/planet_radius" />
 </androidx.constraintlayout.widget.ConstraintLayout>
