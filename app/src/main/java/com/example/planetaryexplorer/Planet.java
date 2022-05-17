@@ -10,6 +10,8 @@ public class Planet {
     public int radius;
     @SerializedName("cost")
     public int age;
+    public String location;
+    public String category;
     @SerializedName("auxdata")
     public String imageUrl;
 }
