@@ -14,7 +14,7 @@
     <string name="planet_age_placeholder_text">Age: 4503 billion years</string>
     <string name="planet_radius_placeholder_text">Radius: 2440 kilometers</string>
     <string name="filter_button_text">Filters</string>
-    <string name="filter_planets_text">Filter planets</string>
+    <string name="filter_planets_text">Filter Planets</string>
     <string name="show_all_planets">Show all planets</string>
     <string name="show_terrestrial_planets">Show Terrestrial Planets</string>
     <string name="show_jovian_planets">Show Jovian Planets</string>
